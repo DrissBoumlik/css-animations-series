@@ -1,0 +1,571 @@
+.intro
+  .titles
+    .headline When to Animate
+    hr
+    a(href="#orientation").title.t1 Orientation
+    a(href="#functional-change").title.t2 Functional Change
+    a(href="#new-element").title.t3 New Element
+    a(href="#highlight").title.t4 Highlight
+    a(href="#visual-feedback").title.t5 Visual Feedback
+    a(href="#system-status").title.t6 System Status
+
+.slides
+  
+  
+  .slide.slide1
+    a(name="orientation")
+    .blurb
+      .title Orientation
+      .sub Answers the Question: 
+        strong Where am I now?
+
+    .example.example-1.no-padding
+      .belt
+        .state.state-1
+          input(placeholder="name")
+          .button next
+        .state.state-2
+          .button back
+
+
+  .slide.slide2
+    a(name="functional-change")
+    .blurb
+      .title Functional Change
+      .sub Answers the Question: 
+        strong What does this element do now?
+
+    .example.example-2.no-padding
+      .switch.is-transitioned
+        .on on
+        .off off
+        .handle
+
+
+  .slide.slide3
+    a(name="new-element")
+    .blurb
+      .title New Element
+      .sub Answers the Question: 
+        strong What should I look at?
+
+    .example.example-3
+      .layout
+        .header
+        .alert
+        .col.col-1
+        .col.col-2
+        .col.col-3
+          .btn trigger
+        .footer
+
+
+  .slide.slide4
+    a(name="highlight")
+    .blurb
+      .title Highlight
+      .sub Answers the Question: 
+        strong What is important here?
+
+    .example.example-4
+      .ui
+        .highlight1
+        .highlight2
+        .col.col-1
+        .col.col-2
+
+
+  .slide.slide5
+    a(name="visual-feedback")
+    .blurb
+      .title Visual Feedback
+      .sub Answers the Question: 
+        strong  Is the layout understanding what I am asking it to do?
+
+    .example.example-5
+      .email
+        .masthead
+        .send
+
+
+  .slide.slide6
+    a(name="system-status")
+    .blurb
+      .title System Status
+      .sub Answers the Question: 
+        strong Is this working? How long will it take?
+
+    .example.example-6
+      .progress-bar
+        .progress
+
+
+
+
+
+
+
+
+
+
+
+// GENERAL ------
+body
+  font-family: 'Roboto', sans-serif
+  color: rgba(0,0,0,0.87)
+  -webkit-font-smoothing: antialiased
+  
+  hr
+    border: none
+    border-top: 4px solid black
+    margin-bottom: 40px
+
+.intro
+  height: 100vh
+  width: 100vw
+  background: #eee
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .headline
+    font-size: 64px
+    letter-spacing: 0.02em
+    margin-bottom: 40px
+    
+  .titles
+    max-width: 800px
+    border: 4px solid black
+    padding: 50px
+    background: white
+  
+  .title
+    font-size: 42px
+    letter-spacing: 0.02em
+    margin-bottom: 40px
+    cursor: default
+    display: block
+    text-decoration: none
+    color: black
+
+    &:last-child
+      margin-bottom: 0px
+  
+
+  .title:nth-child(3):hover
+    color: #673AB7
+  .title:nth-child(4):hover
+    color: #009688
+  .title:nth-child(5):hover
+    color: #E91E63
+  .title:nth-child(6):hover
+    color: #8BC34A
+  .title:nth-child(7):hover
+    color: #2196F3
+  .title:nth-child(8):hover
+    color: #FF9800
+
+.slides
+  margin: 50px auto
+  max-width: 800px
+  padding-top: 200px
+
+.slide
+  border: 4px solid black
+  padding: 30px
+  margin-bottom: 200px
+  
+.blurb
+  border-bottom: 4px solid black
+  padding-bottom: 30px
+  margin-bottom: 30px
+  
+  .slide:nth-child(1) &
+    color: #673AB7
+  .slide:nth-child(2) &
+    color: #009688
+  .slide:nth-child(3) &
+    color: #E91E63
+  .slide:nth-child(4) &
+    color: #8BC34A
+  .slide:nth-child(5) &
+    color: #2196F3
+  .slide:nth-child(6) &
+    color: #FF9800
+  
+  .title
+    font-size: 64px
+    letter-spacing: 0.02em
+
+  .sub
+    font-size: 24px
+
+.example
+  background: #eee
+  padding: 30px
+
+  &.no-padding
+    padding: 0px
+
+    
+// .example-1 ------
+
+.example-1
+  overflow: hidden
+  
+  .belt
+    width: 200%
+    display: flex
+    transition: transform 1s ease-in-out
+    perspective: 1000px
+    
+  .state
+    width: 50%
+    height: 400px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+  .state-1
+    background: #673AB7
+    transition: transform 1s ease-in-out
+    transform-origin: center right
+  .state-2
+    background: #9575CD
+    box-shadow: 0px 0px 0px black
+    z-index: 2
+    transition: all 600ms ease-in-out
+  
+  .button, input
+    width: 300px
+    padding: 20px
+    border: none
+    margin-bottom: 20px
+  
+  .button
+    background: rgba(0,0,0,0.5)
+    color: rgba(255,255,255,0.8)
+    text-align: center
+    text-transform: uppercase
+    font-weight: 600
+    cursor: pointer
+    box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.3)
+    transition: all 200ms cubic-bezier(0.25, 0.39, 0.39, 2.01)
+    
+    
+    &:hover
+      transform: scale(1.05)
+      box-shadow: 0px 25px 15px -15px rgba(0,0,0,0.3)
+
+  input
+    outline: none
+  
+.example-1.is-transitioned
+  .belt
+    transform: translateX(-50%)
+    
+  .state-1
+    transform: scale(0.3) rotateY(-90deg)
+      
+  
+// .example-2 ------
+
+.example-2
+  height: 400px
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #E0F2F1
+  
+  .switch
+    display: flex
+    width: 100px
+    text-align: center
+    border-radius: 200px
+    background: #ef5350
+    height: 50px
+    position: relative
+    overflow: hidden
+    transition: background ease-in-out 0.5s
+    
+    > div
+      line-height: 50px
+      color: white
+      font-weight: 600
+
+    &.is-transitioned
+      background: #009688
+      
+      .handle
+        transform: translateX(50px)
+      
+  .on
+    width: 50%
+
+  .off
+    width: 50%
+
+  .handle
+    cursor: pointer
+    width: 46px
+    height: 46px
+    border-radius: 50%
+    position: absolute
+    background: white
+    top: 2px
+    left: 2px
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4)
+    transition: transform ease-in-out 0.5s
+    
+  
+  
+  
+// .example-3 ------
+
+.example-3
+  background: #FCE4EC
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  
+  .layout
+    display: flex
+    width: 402px
+    border: 4px solid rgba(0,0,0,0.5)
+    padding: 4px
+    flex-wrap: wrap
+    background: white
+
+  .header
+    background: rgba(0,0,0,0.3)
+    height: 100px
+    width: 100%
+    margin-bottom: 4px
+
+  .alert
+    background: rgba(0,0,0,0.3)
+    height: 0px
+    width: 100%
+    background: #E91E63
+    transition: height 400ms cubic-bezier(0.25, 0.39, 0.39, 2.01)
+    
+    &.is-open
+      height: 100px
+      margin-bottom: 4px
+
+  .col
+    width: calc(134px - 3px)
+    height: 300px
+    background: rgba(0,0,0,0.3)
+    margin-right: 4px
+
+  .col-3
+    margin-right: 0px
+    position: relative
+
+  .footer
+    height: 30px
+    background: rgba(0,0,0,0.3)
+    width: 100%
+    margin-top: 4px
+    
+  .btn
+    height: 50px
+    background: rgba(0,0,0,0.5)
+    width: 100%
+    position: absolute
+    bottom: 0
+    border-top: 4px solid white
+    line-height: 50px
+    text-transform: uppercase
+    color: rgba(255,255,255,0.7)
+    cursor: pointer
+    transition: all ease-in-out 200ms
+    
+    &:hover
+      background: rgba(0,0,0,0.7)
+  
+  
+// .example-4 ------
+
+.example-4
+  height: 400px
+  background: #E8F5E9
+  display: flex
+  justify-content: center
+  align-items: center
+  
+  .ui
+    background: rgba(0,0,0,0.3)
+    background: white
+    width: 400px
+    height: 250px
+    position: relative
+    display: flex
+    padding: 4px
+    box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.2)
+
+  .col
+    background: rgba(0,0,0,0.1)
+    margin-right: 4px
+    
+    &.col-1
+      width: calc(30% - 2px)
+      background: rgba(0,0,0,0.15)
+      
+    &.col-2
+      margin-right: 0px
+      width: calc(70% - 2px)
+
+  .highlight1,
+  .highlight2
+    width: 20px
+    height: 20px
+    background: #8BC34A
+    border-radius: 50%
+    position: absolute
+    top: -8px
+    right: 50px
+    animation: pulse 3s ease-in-out infinite
+  
+  .highlight2
+    top: 200px
+    right: auto
+    left: 114px
+    animation-delay: 1s
+
+@keyframes pulse
+  0%, 70%
+    box-shadow: 0px 0px 0px 0px rgba(139, 195, 74, .5)
+  100%
+    box-shadow: 0px 0px 0px 50px rgba(139, 195, 74, 0)
+      
+    
+  
+  
+// .example-5 ------
+
+.example-5
+  height: 400px
+  background: #E3F2FD
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+
+  .email
+    background: rgba(0,0,0,0.3)
+    background: white
+    width: 400px
+    height: 250px
+    position: relative
+    display: flex
+    padding: 4px
+    box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.2)
+    background: white
+    border: 4px solid white
+    transition: opacity 300ms ease-in-out
+    
+    &.is-sent
+      animation: launch 1.5s ease-in-out
+
+    .masthead
+      width: 100%
+      height: 80px
+      background: #e6e6e6
+
+    .send
+      width: 50px
+      height: 50px
+      background: #2196F3
+      position: absolute
+      bottom: 10px
+      right: 10px
+      border-radius: 50%
+      cursor: pointer
+      transition: transform 200ms ease-in-out
+      box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.2)
+      
+      &:hover
+        transform: translate(0px, -5px) scale(1.1)
+      
+    
+@keyframes launch
+  0%
+    opacity: 1
+    transform: translateY(0) scale(1)
+  10%, 15%
+    transform: translateY(20px)
+  40%, 70%
+    transform: translateY(-600px) scale(1)
+  70%
+    opacity: 1
+  71%
+    opacity: 0
+    transform: translateY(-600px) scale(0.6)
+  72%
+    opacity: 0
+    transform: translateY(0px) scale(0.6)
+  100%
+    opacity: 1
+    transform: translateY(0px) scale(1)
+  
+      
+  
+// .example-6 ------
+
+.example-6
+  height: 400px
+  background: #FFF3E0
+  display: flex
+  justify-content: center
+  align-items: center
+    
+  .progress-bar
+    width: 200px
+    height: 20px
+    background: white
+    border: 4px solid white
+    box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.3)
+    
+  .progress
+    height: 100%
+    width: 0%
+    background-color: #FF9800
+    animation: progress linear 6s infinite
+    
+@keyframes progress
+  0%, 30%
+    width: 0%
+  30%
+    width: 20%
+  40%
+    width: 60%
+  70%, 90%
+    width: 80%
+  90%, 100%
+    width: 100%
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

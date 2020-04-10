@@ -1,0 +1,184 @@
+body {
+    background: #e3e3e3;
+    padding: 20px;
+    font-family: "Roboto Slab", serif;
+  }
+  
+  .header {
+    background: #00BCD4;
+    text-align: center;
+    overlfow: hidden;
+  }
+  
+  .text {
+    padding: 30px 10px;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .website {
+    margin: 50px auto;
+    background: #fff;
+    max-width: 700px;
+    -webkit-box-shadow: 0px 25px 30px -20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 25px 30px -20px rgba(0, 0, 0, 0.2);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  .grid {
+    padding: 10px;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+  .grid .item {
+    background: #ccc;
+    height: 60px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 4px;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: white;
+    width: 160px;
+    background-position: center;
+    background-size: cover;
+  }
+  .grid .item:nth-child(1) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/52758/screenshots/2922421/virgin_islands_national_park_dribbble_j_fletcher.jpg);
+  }
+  .grid .item:nth-child(2) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2921609/untitled-4.png);
+  }
+  .grid .item:nth-child(3) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2921840/dribbble_stickermule.png);
+  }
+  .grid .item:nth-child(4) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2917699/untitled-1.png);
+  }
+  .grid .item:nth-child(5) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2920459/dribbble_pill.png);
+  }
+  .grid .item:nth-child(6) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2920159/untitled-1.png);
+  }
+  .grid .item:nth-child(7) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/52758/screenshots/2919566/st_john_usvi_fish.jpg);
+  }
+  .grid .item:nth-child(8) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/246575/screenshots/2919362/dribbble.jpg);
+  }
+  .grid .item:nth-child(9) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/299/screenshots/2917854/fizzy-shades.png);
+  }
+  .grid .item:nth-child(10) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2917699/untitled-1.png);
+  }
+  .grid .item:nth-child(11) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/1061/screenshots/2916828/mimita_2x.png);
+  }
+  .grid .item:nth-child(12) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2916809/dribbble_lemon.png);
+  }
+  .grid .item:nth-child(13) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2915526/untitled-1.png);
+  }
+  .grid .item:nth-child(14) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/3460/screenshots/2915278/business-cards.png);
+  }
+  .grid .item:nth-child(15) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2915065/dribbble_soda.png);
+  }
+  .grid .item:nth-child(16) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/60166/screenshots/2914950/bear.jpg);
+  }
+  .grid .item:nth-child(17) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2914297/dribbble_acorn.png);
+  }
+  .grid .item:nth-child(18) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2911678/dribbble_beerglass.png);
+  }
+  .grid .item:nth-child(19) {
+    background-image: url(https://d13yacurqjgara.cloudfront.net/users/34991/screenshots/2910866/dribbble_whale.png);
+  }
+  .grid .item:nth-child(4n-5) {
+    height: 50px;
+  }
+  .grid .item:nth-child(2n) {
+    height: 300px;
+  }
+  .grid .item:nth-child(3n) {
+    height: 120px;
+  }
+  
+  .item {
+    opacity: 0;
+  }
+  
+  .item.is-visible {
+    -webkit-animation: Items 600ms ease-in forwards;
+            animation: Items 600ms ease-in forwards;
+  }
+  
+  @-webkit-keyframes Items2 {
+    0% {
+      opacity: 0;
+      height: 0%;
+      padding: 0px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes Items2 {
+    0% {
+      opacity: 0;
+      height: 0%;
+      padding: 0px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes Items {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.3) rotateY(90deg);
+              transform: scale(0.3) rotateY(90deg);
+    }
+    60% {
+      -webkit-transform: scale(1.4);
+              transform: scale(1.4);
+    }
+    90% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes Items {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.3) rotateY(90deg);
+              transform: scale(0.3) rotateY(90deg);
+    }
+    60% {
+      -webkit-transform: scale(1.4);
+              transform: scale(1.4);
+    }
+    90% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
